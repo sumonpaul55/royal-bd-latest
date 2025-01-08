@@ -43,7 +43,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return <>
+    <div className="flex">
+      <div className="md:w-[350px] h-[100vh] text-white bg-slate-700 p-2 md:p-5 overflow-y-auto">
+        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, tenetur.</h1>
+      </div>
+      <div className="flex-1 bg-slate-100 overflow-y-auto">
+        <div>
+          dashboard topbar
+        </div>
+        <div className="h-screen">
+          <Outlet />
+        </div>
+        <footer>
+          Footer
+        </footer>
+      </div>
+    </div>
+  </>;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
