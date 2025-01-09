@@ -2,6 +2,7 @@ import type { Route } from "../+types/root";
 import React from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import { Link } from "react-router";
 
 
 
@@ -51,11 +52,12 @@ export default function Login() {
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
 
-          <Form.Item>
+          {/* <Form.Item>
             <Button type="primary" htmlType="submit" className="w-full">
               Login
             </Button>
-          </Form.Item>
+          </Form.Item> */}
+          <Link to="/dashboard" className="bg-blue-500 text-white w-full block py-1 rounded text-center font- text-xl">Login</Link>
         </Form>
         <div className="text-center mt-4">
           <a href="/forgot-password" className="text-blue-500 hover:underline">
