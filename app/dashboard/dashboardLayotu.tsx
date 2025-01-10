@@ -30,6 +30,11 @@ export default function App() {
                                 About
                             </Link>
                         </li>
+                        <li>
+                            <Link to="/dashboard/contact" className="block py-2 px-4 rounded hover:bg-gray-700 border-b border-slate-500">
+                                Contact
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -66,10 +71,10 @@ export default function App() {
                         <h1 className="text-xl font-bold">Welcome to the Dashboard</h1>
                         {/* login and register */}
                         <div className="">
-                            <Link to="/login" className="flex gap-1 items-center border px-2 py-1 rounded"><RxAvatar />Login</Link>
+                            <Link to="/login" className="flex gap-1 items-center border px-2 py-1 rounded"><RxAvatar size={20} />User Name</Link>
                         </div>
                     </div>
-                    <div className="p-3 md:p-5">
+                    <div className="p-3 md:p-5 max-h-screen overflow-y-auto">
                         <Outlet />
                     </div>
                 </div>
