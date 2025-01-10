@@ -11,30 +11,32 @@ export default function DashboardHome() {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-100 p-0 md:p-6">
-            <header className="flex items-center justify-between mb-8">
-                <h1 className="md:text-2xl font-bold text-gray-800">Admin Dashboard</h1>
-                <div className="text-sm md:text-base">
-                    <p className="text-gray-600">January 10, 2025</p>
-                    <p className="font-semibold">Welcome, Admin!</p>
-                </div>
-            </header>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {cards.map((card, index) => (
-                    <div
-                        key={index}
-                        className={`p-6 rounded-lg shadow-md text-white ${card.bgColor}`}
-                    >
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h2 className="text-lg font-semibold">{card.title}</h2>
-                                <p className="text-2xl font-bold mt-2">{card.value}</p>
-                            </div>
-                            <div className="text-4xl">{card.icon}</div>
-                        </div>
+        <div className="min-h-screen bg-gray-100 px-0 md:px-6 flex justify-between flex-col">
+            <div>
+                <header className="flex items-center justify-between mb-7">
+                    <h1 className="md:text-2xl font-bold text-gray-800">Admin Dashboard</h1>
+                    <div className="text-sm md:text-base">
+                        <p className="text-gray-600">January 10, 2025</p>
+                        <p className="font-semibold">Welcome, Admin!</p>
                     </div>
-                ))}
+                </header>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {cards.map((card, index) => (
+                        <div
+                            key={index}
+                            className={`p-6 rounded-lg shadow-md text-white ${card.bgColor}`}
+                        >
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <h2 className="text-lg font-semibold">{card.title}</h2>
+                                    <p className="text-2xl font-bold mt-2">{card.value}</p>
+                                </div>
+                                <div className="text-4xl">{card.icon}</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <footer className="mt-12 text-center text-gray-600">
