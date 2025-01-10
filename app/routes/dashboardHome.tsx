@@ -11,10 +11,10 @@ export default function DashboardHome() {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
+        <div className="min-h-screen bg-gray-100 p-0 md:p-6">
             <header className="flex items-center justify-between mb-8">
-                <h1 className="text-2xl font-bold text-gray-800">RoyalBD Admin Dashboard</h1>
-                <div>
+                <h1 className="md:text-2xl font-bold text-gray-800">Admin Dashboard</h1>
+                <div className="text-sm md:text-base">
                     <p className="text-gray-600">January 10, 2025</p>
                     <p className="font-semibold">Welcome, Admin!</p>
                 </div>

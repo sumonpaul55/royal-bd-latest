@@ -43,38 +43,43 @@ export default function App() {
             <div className="flex-1 md:ml-1/4 bg-gray-100">
                 {/* Navbar for mobile */}
                 <div className="bg-gray-800 text-white p-4 flex md:hidden">
-                    <div className="flex gap-2">
-                        <h1 className="text-lg font-bold">Dashboard</h1>
-                        <button
-                            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                            className={`mr-4 focus:outline-none z-50 ${isSidebarOpen ? "ml-10" : ""}`}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth={2}
+                    <div className="flex justify-between items-center w-full">
+                        <div className="flex gap-2">
+                            <h1 className="text-lg font-bold">Dashboard</h1>
+                            <button
+                                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                                className={`mr-4 focus:outline-none z-50 ${isSidebarOpen ? "ml-10" : ""}`}
                             >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M4 6h16M4 12h16m-7 6h7"
-                                />
-                            </svg>
-                        </button>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={2}
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M4 6h16M4 12h16m-7 6h7"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                        <div className="md:hidden">
+                            <Link to="/login" className="flex gap-1 items-center border px-2 py-1 rounded"><RxAvatar size={20} />User Name</Link>
+                        </div>
                     </div>
                 </div>
                 <div className="">
-                    <div className="bg-gray-800 py-3 text-white px-3 md:px-6 flex justify-between items-center">
+                    <div className="bg-gray-800 py-3 text-white px-3 md:px-6 md:flex justify-between items-center h-[60px] hidden">
                         <h1 className="text-xl font-bold">Welcome to the Dashboard</h1>
                         {/* login and register */}
                         <div className="">
                             <Link to="/login" className="flex gap-1 items-center border px-2 py-1 rounded"><RxAvatar size={20} />User Name</Link>
                         </div>
                     </div>
-                    <div className="p-3 md:p-5 max-h-screen overflow-y-auto">
+                    <div className="p-3 md:p-5 max-h-[calc(100vh-60px)] overflow-y-auto">
                         <Outlet />
                     </div>
                 </div>
